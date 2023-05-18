@@ -1,0 +1,167 @@
+:root{
+	--borderRadius: 5px;
+
+	--h1: 50px;
+	--h2: 40px;
+	--h3: 30px;
+	--h4: 24px;
+	--h5: 20px;
+	--h6: 16px;
+
+	--backgroundColor: #2013E8;
+	--backgroundColor2: #030F26;
+
+	--gradient1: #B400EA;
+	--gradient2: #3E1CEB;
+
+	/*Todos gradients*/
+
+	--gradient3: #3BABEB;
+	--gradient4: #3149FA;
+
+	--gradient5: #EBA611;
+	--gradient6: #F74F05;
+
+	--gradient7: #E30E2E;
+	--gradient8: #EB3C17;
+
+	--gradient9: #38EA59;
+	--gradient10: #60E32D;
+}
+
+
+
+
+
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: var(--backgroundColor);
+}
+
+
+
+
+.App{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.todo-list{
+	color: white;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+	padding: 24px;
+	background-color: var(--backgroundColor2);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid black;
+	border-radius: var(--borderRadius);
+}
+
+
+
+.todo-form{
+	margin-top: 16px;
+	width: 100%;
+	border: 1px solid var(--gradient1);
+	box-shadow: 0px 0px 4px var(--gradient1);
+	border-radius: var(--borderRadius);
+	overflow: hidden;
+}
+.todo-form input{
+	width: 70%;
+	background-color: transparent;
+}
+.todo-form .todo-button{
+	width: 30%;
+	background-image:
+	linear-gradient(-45deg,var(--gradient1),var(--gradient2));
+}
+.todo-button:hover{
+	cursor: pointer;
+}
+.todo-form input, .todo-button{
+	padding: 16px 10px;
+	border: none;
+	color: white;
+}
+
+
+
+.todos{
+	width: 100%;
+	margin-top: 16px;
+}
+.todo-row{
+	transition: all 0.5s, box-shadow 1s;
+	margin-top: 4px;
+	padding: 12px;
+
+	font-size: var(--h5);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border: 1px solid gray;
+	border-radius: var(--borderRadius);
+}
+.todo-row.complete{
+	text-decoration: line-through;
+	opacity: 0.3;
+
+
+	/*important to prevent :nth-child be dominant*/
+	background:
+	linear-gradient(-45deg,var(--gradient1),var(--gradient2)) !important;
+}
+.todo-row:hover{
+	transition: all 1s, box-shadow 0.2s;
+	cursor: pointer;
+	box-shadow: 0px 0px 4px white;
+}
+.todo-row:nth-child(4n + 1){
+	background:
+	linear-gradient(90deg,var(--gradient3),var(--gradient4))
+}
+.todo-row:nth-child(4n + 2){
+	background:
+	linear-gradient(90deg,var(--gradient5),var(--gradient6))
+}
+.todo-row:nth-child(4n + 3){
+	background:
+	linear-gradient(90deg,var(--gradient7),var(--gradient8))
+}
+.todo-row:nth-child(4n + 4){
+	background:
+	linear-gradient(90deg,var(--gradient9),var(--gradient10))
+}
+
+.icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: var(--h4)
+}
+.icons >*{
+	transition: all 0.5s;
+}
+.icons > *:hover{
+	transition: all 0.2s;
+	transform: scale(1.1);
+	color: black;
+	cursor: pointer;
+}
