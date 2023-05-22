@@ -1,4 +1,4 @@
-#Simple todo app
+# **Simple todo app**
 
 https://theshirya-react-todo-app.netlify.app/
 
